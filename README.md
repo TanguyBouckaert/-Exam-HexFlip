@@ -1,9 +1,9 @@
-.
+h2/
 
-November 9 - November 16:
-Hexagonal GridPosition
-PositionHelper class
-Tile Model + TileView
+* November 9 - November 16:
+* Hexagonal GridPosition
+* PositionHelper class
+* Tile Model + TileView
 Board Model + BoardView
 Find Tiles in scene + create Tile Model (through Board Model) + Link TileView with Tile Model
 Detect click on TileView
