@@ -16,11 +16,23 @@ namespace HexFlip.Helper
             Vector3 scaleWorldPosition = worldposition / 1;
 
             //Calculation of the rowcordinat
-            int r = Mathf.RoundToInt(scaleWorldPosition.z * 0.65f); // Why are we using 0.65? Is it a distance scaler?
+            int r = Mathf.RoundToInt(scaleWorldPosition.z * 0.65f); /* 0.65 verwijst naar de breedte van de tile.
+                                                                     * tiles staan in een rij dus naast elkaar waardoor de afstand makkelijk te brekennen is 
+                                                                     * door het gebruiken van 0.65
+                                                                     */
 
-            //Colom Calculator: What is it use, what is it's perpose?
-            int colom = Mathf.RoundToInt((scaleWorldPosition.x - (Mathf.Abs(r % 2) * (Mathf.Sqrt(3) / 2)))/ Mathf.Sqrt(3));
-
+            //Colom Calculator: Used to make the conversion from double width to axial coordinates
+            int colom = Mathf.RoundToInt((scaleWorldPosition.x - (Mathf.Abs(r % 2) * (Mathf.Sqrt(3) / 2)))/ Mathf.Sqrt(3));  /* (Mathf.Abs(r % 2) => om te checken of de tiles onder elkaar staan | 
+                                                                                                                              * indien de uitkomst van deze formule 0 is wil dit zeggen dat de tiles onder 
+                                                                                                                              * elkaar staan.
+                                                                                                                              * 
+                                                                                                                              * Afstand van de oneven inspringende tiles => (Mathf.Sqrt(3) / 2)
+                                                                                                                              * 
+                                                                                                                              * (scaleWorldPosition.x - (Mathf.Abs(r % 2) * (Mathf.Sqrt(3) / 2)))
+                                                                                                                              * ^ dit is de echte positie van uw tile, 
+                                                                                                                              * 
+                                                                                                                              * Uiteindelijk delen we nog eens alles door sqrt(3) wat de breedte is van een tile
+                                                                                                                              */
             //Calculation of the colum cordinat
             int q = colom - (r - (r&1)) / 2; //what does the & operator do?
             int s = -q-r; //do we still need this tho?
