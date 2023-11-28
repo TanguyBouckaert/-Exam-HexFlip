@@ -8,7 +8,7 @@ namespace HexFlip.Helper
 {
     public class PositionHelper
     {
-        public GridPosition WorldToGridPosition(Vector3 worldposition)
+        public static GridPosition WorldToGridPosition(Vector3 worldposition)
         {
             //DONE: Convert Inworld position to gridposition!
 
@@ -40,7 +40,7 @@ namespace HexFlip.Helper
             return new GridPosition(r, q, s);
         }
 
-        public Vector3 GridPositionToWorld(GridPosition gridposition)
+        public static Vector3 GridPositionToWorld(GridPosition gridposition)
         {
             //TODO: Convert GridPosition to Inworld position!
 

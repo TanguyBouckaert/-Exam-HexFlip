@@ -4,14 +4,14 @@
 - [x] Hexagonal GridPosition
 - [x] PositionHelper class
 - [x] Tile Model + TileView
-- [ ] Board Model + BoardView
+- [x] Board Model + BoardView
 - [ ] Find Tiles in scene + create Tile Model (through Board Model) + Link TileView with Tile Model
 - [ ] Detect click on TileView
 - [ ] Set IsHighlighted on Tile Model
 - [ ] Update Highlight material in TileView when IsHighlighted changes
 
 ## November 16 - November 23
-- [ ] Piece Model + PieceView 
+- [x] Piece Model + PieceView 
 - [ ] Difference with chess: Position is fixed in HexFlip, but PlayerColor can be changed (flip pieces)
 - [ ] Piece Prefab: 1 prefab made up of 2 cylinders. Player Color determines rotation.
 - [ ] Board: Place / Remove piece (we will need remove for undo later)

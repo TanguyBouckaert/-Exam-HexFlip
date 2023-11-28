@@ -17,7 +17,7 @@ namespace HexFlip.View
         private MeshRenderer _renderer;
         [SerializeField]
         private Material _highlightMaterial;
-        [SerializeField]
+
         private Material _defaultMaterial;
 
         private void Awake()
